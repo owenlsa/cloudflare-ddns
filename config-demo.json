@@ -1,0 +1,22 @@
+{
+  "cloudflare": [
+    {
+      "authentication": {
+        "api_token": "api_token_from_cloudflare",
+        "api_key": {
+          "api_key": "api_key_from_cloudflare",
+          "account_email": "cloudflare_account_email"
+        }
+      },
+      "zone_id": "zone_id_of_site",
+      "subdomains": {
+        "A": "ipv4_subdomain",
+        "AAAA": "ipv6_subdomain"
+      },
+      "proxied": false
+    }
+  ],
+  "ipv4": true,
+  "ipv6": true,
+  "local_ip": true
+}
