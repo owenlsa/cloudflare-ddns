@@ -1,2 +1,2 @@
 #!/bin/bash
-python3 cloudflare-ddns.py
+python3 /home/gongjuren/cloudflare-ddns/cloudflare-ddns.py >> /home/gongjuren/cloudflare-ddns/cloudflare-ddns.log
