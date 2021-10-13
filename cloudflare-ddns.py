@@ -81,12 +81,13 @@ def getLocalIPs(ipv4_enabled, ipv6_enabled):
     for ip in ip_list:
         if any(list(prefix in ip for prefix in forbid_prefix)):
             continue
-        if ipv4_enabled and checkValidIP(ip, type="ipv4"):
+        # TODO: roughly use the first mathing IP
+        if "ipv4" not in ips.keys() and ipv4_enabled and checkValidIP(ip, type="ipv4"):
             ips["ipv4"] = {
                 "type": "A",
                 "ip": ip
             }
-        if ipv6_enabled and checkValidIP(ip, type="ipv6"):
+        if "ipv6" not in ips.keys() and ipv6_enabled and checkValidIP(ip, type="ipv6"):
             ips["ipv6"] = {
                 "type": "AAAA",
                 "ip": ip
